@@ -1,0 +1,89 @@
+// Function to update row indices after deletion
+function updateRowIndices() {
+    const rows = document.querySelectorAll('#table_body tr');
+    rows.forEach((row, index) => {
+        const rowNumber = index + 1;
+        row.querySelectorAll('input').forEach(input => {
+            const name = input.name.replace(/\d+/, rowNumber);
+            const id = input.id.replace(/\d+/, rowNumber);
+            input.name = name;
+            input.id = id;
+        });
+    });
+}
+
+// Function to log the current row index
+function logRowIndex(input) {
+    const currentRow = input.closest('tr');
+    if (currentRow) {
+        const rowIndex = currentRow.rowIndex; // This is 0-based index
+        console.log("Row Index:", rowIndex); // Show 1-based index to user
+        localStorage.setItem("row_index", rowIndex);
+    }
+}
+
+// Event delegation for dynamically added rows
+document.getElementById('table_body').addEventListener('focus', function(e) {
+    if (e.target.matches('input[name*="[]"]')) {
+        logRowIndex(e.target);
+    }
+}, true);
+
+document.getElementById('table_body').addEventListener('click', function(e) {
+    if (e.target.matches('input[name*="[]"]')) {
+        logRowIndex(e.target);
+    }
+}, true);
+
+// Modify the F2 key event listener
+document.getElementById("table_body").addEventListener("keydown", function(event) {
+    const target = event.target;
+    if (target.tagName === "INPUT" && event.key === "F2") {
+        event.preventDefault();
+        const fieldName = target.name.replace("[]", "");
+        const value = target.value;
+        const currentLocationId = document.getElementById("userLocationId").value;
+        let query = "";
+
+        if (fieldName === "batch") {
+            query = `select * from ${fieldName}es where ${fieldName}_name like '${value}%' && location_id = '${currentLocationId}'`;
+        } else if (fieldName === "category") {
+            query = `select * from categories where ${fieldName}_name like '${value}%' && location_id = '${currentLocationId}'`;
+        } else if (fieldName === "hsnCode") {
+            query = `select * from hsn_codes where hsn_code like '${value}%' && location_id = '${currentLocationId}'`;
+        } else if (fieldName === "tax") {
+            query = `select * from taxes where tax_code like '${value}%' && location_id = '${currentLocationId}'`;
+        } else if (fieldName === "mrp") {
+            query = `select * from mrps where mrp like '${value}%' && location_id = '${currentLocationId}'`;
+        } else {
+            query = `select * from ${fieldName}s where ${fieldName}_name like '${value}%' && location_id = '${currentLocationId}'`;
+        }
+
+        const data = new FormData();
+        data.append(`lb_qry_${fieldName}`, query);
+        const row_index_f2 = localStorage.getItem("row_index");
+        data.append("lb_f2_row_index", row_index_f2);
+
+        const ajaxRequest = new XMLHttpRequest();
+        ajaxRequest.open("POST", "itemStoring.php", true);
+        ajaxRequest.send(data);
+        ajaxRequest.onreadystatechange = function () {
+            if (ajaxRequest.status === 200 && ajaxRequest.readyState === 4) {
+                document.getElementById("response_message").innerHTML = ajaxRequest.responseText;
+            }
+        };
+    }
+});
+
+// Modify the row deletion logic
+$(document).on("click", "#remove", function(e) {
+    e.preventDefault();
+    const removedRow = $(this).closest('tr');
+    const removedIndex = removedRow.index() + 1; // 1-based index
+    console.log("Removed row at index:", removedIndex);
+
+    removedRow.remove();
+    updateRowIndices();
+
+    localStorage.setItem("row_deleted", 1);
+});

@@ -1,0 +1,892 @@
+&userName=<?php echo $userSearchData['user_name'];?>&userPassword=<?php echo $userSearchData['user_pass'];?>&userRole=<?php echo $userSearchData['user_role'];?>
+            &userLocationId=<?php echo $userSearchData['location_id'];?>
+            
+            
+            
+            
+            if(isset($_SESSION['supplier_state'])){
+    $supplierState = $_SESSION['supplier_state'] ?? ''; // Avoid errors if session is not set
+    if($supplierState == $companyState){
+    ?>
+    <style>
+        #igstAmount{
+                display:none;
+        }
+    </style>
+<?php
+    }else{
+    ?>
+    <style>
+        #cgstAmount{
+            display: none;
+        }
+        #sgstAmount{
+            display:none;
+        }
+    </style>
+    
+<?php
+    }
+    
+}
+?>     
+            
+            
+            
+           
+            // let batch = <?php echo json_encode($batch)?>;
+            
+            
+            
+            
+            
+            <!-- purchase delete -->
+            <tr>
+                <td>
+                    <input
+                        type="text"
+                        class="serial-field"
+                        name="serialNumber[]"
+                        id="serialNumber_1"
+                        style="font-size:12px;height:25px;width:40px;margin-left:1px;"
+                        maxlength="4"
+                        autocomplete="off"
+                        value="1"
+                        readonly
+                        
+                    />
+                </td>
+            
+                <td>
+                    <input
+                        type="text"
+                        class="product-field form"
+                        name="product[]"
+                        value="<?php echo isset($product[1]) ? $product[1]  : '';?>"
+                        id="product_1"
+                        autocomplete="off"
+                        style="font-size:12px;height:25px;width:100px;margin-left:-9px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text" 
+                        class="brand-field"
+                        name="brand[]"
+                        value="<?php echo isset($brand[1]) ? $brand[1]  : '';?>"
+                        id="brand_1"
+                        autocomplete="off"
+                        style="font-size:12px;height:25px;width:120px;margin-left:-2px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="design[]"
+                        value="<?php echo isset($design[1]) ? $design[1]  : '';?>"
+                        id="design_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:140px;margin-left:0px;"
+                        maxlength="30"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="batch[]"
+                        value="<?php echo isset($batch[1]) ? $batch[1]  : '';?>"
+                        id="batch_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:120px;margin-left:0px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="color[]"
+                        value="<?php echo isset($color[1]) ? $color[1]  : '';?>"
+                        id="color_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:80px;margin-left:0px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="category[]"
+                        value="<?php echo isset($category[1]) ? $category[1]  : '';?>"
+                        id="category_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:80px;margin-left:-2px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text"
+                        class="design-field"
+                        name="hsnCode[]"
+                        value="<?php echo isset($hsnCode[1]) ? $hsnCode[1]  : '';?>"
+                        id="hsnCode_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:65px;margin-left:-6px;"
+                        maxlength="8"
+                    />
+                </td>
+                <td>
+                
+                    
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="tax[]"
+                        value="<?php echo isset($tax[1]) ? $tax[1]  : '';?>"
+                        id="tax_1"
+                        style="font-size:13px;height:25px;width:40px;margin-left:0px;"
+                        maxlength="4"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="size[]"
+                        value="<?php echo isset($size[1]) ? $size[1]  : '';?>"
+                        id="size_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:50px;margin-left:0px;"
+                        maxlength="30"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="mrp[]"
+                        value="<?php echo isset($mrp[1]) ? $mrp[1]  : '';?>"
+                        id="mrp_1"
+                        autocomplete="off"
+                        style="text-align:right;font-size:13px;height:25px;width:60px;margin-left:0px;"
+                        maxlength="12"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="sellingPrice[]"
+                        value="<?php echo isset($sellingP[1]) ? $sellingP[1]  : '';?>"
+                        id="sellingPrice_1"
+                        autocomplete="off"
+                        style="text-align:right;font-size:13px;height:25px;width:60px;margin-left:0px;"
+                        maxlength="12"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="rate-field"
+                        name="rate[]"
+                        value="<?php echo isset($rate[1]) ? $rate[1]  : '';?>"
+                        id="rate_1"
+                        autocomplete="off"
+                        style="text-align:right;font-size:13px;height:25px;width:60px;margin-left:-4px;"
+                        maxlength="12"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="qty-field"
+                        name="qty[]"
+                        value="<?php echo isset($qty[1]) ? $qty[1]  : '';?>"
+                        id="qty_1"
+                        autocomplete="off"
+                        style="text-align:right;font-size:13px;height:25px;width:30px;margin-left:0px;"
+                        maxlength="5"
+                        oninput="calculateAmount()"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="amount-field"
+                        name="amount[]"
+                        value="<?php echo isset($amount[1]) ? $amount[1]  : '';?>"
+                        id="amount_1"
+                        autocomplete="off"
+                        style="text-align:right;
+                        height:25px;font-weight:bold;width:80px;
+                        margin-left:-6px;background-color:#212529;
+                        color:white;border:1px solid white;"
+                        maxlength="13"
+                        readonly
+                        
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="id[]"
+                        value="<?php echo isset($id[1]) ? $id[1]  : '';?>"
+                        id="id_1"
+                        readonly
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:65px;margin-left:-4px;background-color:#212529;color:white;border:1px solid white;text-align:right;"
+                    
+                        
+                        
+                    />
+                </td>
+                
+                
+                
+                
+                <!-- Purchase Edit -->
+                <td>
+                    <input
+                        type="text"
+                        class="product-field form"
+                        name="product[]"
+                        value="<?php echo isset($product[1]) ? $product[1]  : '';?>"
+                        id="product_1"
+                        autocomplete="off"
+                        style="font-size:12px;height:25px;width:100px;margin-left:-9px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text" 
+                        class="brand-field"
+                        name="brand[]"
+                        value="<?php echo isset($brand[1]) ? $brand[1]  : '';?>"
+                        id="brand_1"
+                        autocomplete="off"
+                        style="font-size:12px;height:25px;width:120px;margin-left:-2px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="design[]"
+                        value="<?php echo isset($design[1]) ? $design[1]  : '';?>"
+                        id="design_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:140px;margin-left:0px;"
+                        maxlength="30"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="batch[]"
+                        value="<?php echo isset($batch[1]) ? $batch[1]  : '';?>"
+                        id="batch_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:120px;margin-left:0px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="color[]"
+                        value="<?php echo isset($color[1]) ? $color[1]  : '';?>"
+                        id="color_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:80px;margin-left:0px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="category[]"
+                        value="<?php echo isset($category[1]) ? $category[1]  : '';?>"
+                        id="category_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:80px;margin-left:-2px;"
+                        maxlength="30"
+                    />
+                </td>
+                <td>
+                    <input
+                        type="text"
+                        class="design-field"
+                        name="hsnCode[]"
+                        value="<?php echo isset($hsnCode[1]) ? $hsnCode[1]  : '';?>"
+                        id="hsnCode_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:65px;margin-left:-6px;"
+                        maxlength="8"
+                    />
+                </td>
+                <td>
+                
+                    
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="tax[]"
+                        value="<?php echo isset($tax[1]) ? $tax[1]  : '';?>"
+                        id="tax_1"
+                        style="font-size:13px;height:25px;width:40px;margin-left:0px;"
+                        maxlength="4"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="size[]"
+                        value="<?php echo isset($size[1]) ? $size[1]  : '';?>"
+                        id="size_1"
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:50px;margin-left:0px;"
+                        maxlength="30"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="mrp[]"
+                        value="<?php echo isset($mrp[1]) ? $mrp[1]  : '';?>"
+                        id="mrp_1"
+                        autocomplete="off"
+                        style="text-align:right;font-size:13px;height:25px;width:60px;margin-left:0px;"
+                        maxlength="12"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="sellingPrice[]"
+                        value="<?php echo isset($sellingP[1]) ? $sellingP[1]  : '';?>"
+                        id="sellingPrice_1"
+                        autocomplete="off"
+                        style="text-align:right;font-size:13px;height:25px;width:60px;margin-left:0px;"
+                        maxlength="12"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="rate-field"
+                        name="rate[]"
+                        value="<?php echo isset($rate[1]) ? $rate[1]  : '';?>"
+                        id="rate_1"
+                        autocomplete="off"
+                        style="text-align:right;font-size:13px;height:25px;width:60px;margin-left:-4px;"
+                        maxlength="12"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="qty-field"
+                        name="qty[]"
+                        value="<?php echo isset($qty[1]) ? $qty[1]  : '';?>"
+                        id="qty_1"
+                        autocomplete="off"
+                        style="text-align:right;font-size:13px;height:25px;width:30px;margin-left:0px;"
+                        maxlength="5"
+                        oninput="calculateAmount()"
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="amount-field"
+                        name="amount[]"
+                        value="<?php echo isset($amount[1]) ? $amount[1]  : '';?>"
+                        id="amount_1"
+                        autocomplete="off"
+                        style="text-align:right;
+                        height:25px;font-weight:bold;width:80px;
+                        margin-left:-6px;background-color:#212529;
+                        color:white;border:1px solid white;"
+                        maxlength="13"
+                        readonly
+                        
+                    />
+                </td>
+                
+                <td>
+                    <input
+                        type="text" 
+                        class="design-field"
+                        name="id[]"
+                        value="<?php echo isset($id[1]) ? $id[1]  : '';?>"
+                        id="id_1"
+                        readonly
+                        autocomplete="off"
+                        style="font-size:13px;height:25px;width:65px;margin-left:-4px;background-color:#212529;color:white;border:1px solid white;text-align:right;"
+                    
+                        
+                        
+                    />
+                </td>
+                
+                
+                
+                        <!-- <div style="margin-left:165px;font-size:12px;">
+                <div style="width:1235px;height:270px;overflow-y:auto;" id="itemTable">
+                    <table class="table text-white table-dark" style="font-size:11px;border-collapse:collapse;width:100%;">
+                        <thead>
+                            <tr style="position:sticky;z-index:1;top:0;background-color:#FF3CAC">
+                                <th style="padding-left:5px">S.No.</th>
+                                <th style="padding-left:4px">Design</th>
+                                <th style="padding-left:0px;width:20px">Description</th>
+                                <th style="padding-left:-15px;width:10px">HSN</th>
+                                <th style="padding-left:0px">Tax</th>
+                                <th style="padding-left:5px">Selling</th>
+                                <th style="padding-left:5px">Salesman</th>
+                                <th style="padding-left:0px">Qty</th>
+                                <th style="padding-left:0px;width:50px;">Disc %</th>
+                                <th style="padding-left:0px;">Disc.Amt</th>
+                                <th style="padding-left:0px">Amount</th>
+                                <th hidden style="padding-left:0px">Actual</th>
+                                <th hidden style="padding-left:0px">Taxable</th>
+                                <th hidden style="padding-left:0px">Tax Amt</th>
+                                <th >Id</th>
+                                <th style="padding-left:2px">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="items" id="table_body">
+                            <tr>
+                                <td>
+                                    <input type="text" class="serial-field" name="serialNumber[]" id="serialNumber_1" style="font-size:12px;height:25px;width:45px;margin-left:1px;" maxlength="4" autocomplete="off" value="1" readonly />
+                                </td>
+                                <td>
+                                    <input type="text" class="design-field form" name="design[]" id="design_1" autocomplete="off" style="font-size:12px;height:25px;width:200px;margin-left:-10px;" maxlength="30" />
+                                </td>
+                                <td>
+                                    <input type="text" class="description-field" name="description[]" id="description_1" autocomplete="off" style="font-size:12px;height:25px;width:430px;margin-left:-38px;" maxlength="150" readonly />
+                                </td>
+                                
+                                <td>
+                                    <input type="text" class="hsnCode-field" name="hsnCode[]" id="hsnCode_1" autocomplete="off" style="font-size:13px;height:25px;width:65px;margin-left:0px;" maxlength="8" readonly/>
+                                </td>
+                                <td>
+                                    <input type="text" class="tax-field" name="tax[]" id="tax_1" autocomplete="off" style="font-size:13px;height:25px;width:35px;margin-left:-16px;" maxlength="8" readonly/>
+                                </td>
+                                <td>
+                                    <input type="text" class="sellingPrice-field" name="sellingPrice[]" id="sellingPrice_1" autocomplete="off" style="text-align:right;font-size:13px;height:25px;width:70px;margin-left:-13px;" maxlength="12" readonly/>
+                                </td>
+                                <td>
+                                    <input type="text" class="salesMan-field" name="salesMan[]" id="salesMan_1" autocomplete="off" style="text-align:right;font-size:13px;height:25px;width:60px;margin-left:-14px;" maxlength="12" />
+                                </td>
+                                <td>
+                                    <input type="text" class="qty-field" name="qty[]" id="qty_1" autocomplete="off" style="text-align:right;font-size:13px;height:25px;width:35px;margin-left:-31px;" maxlength="5" />
+                                </td>
+                                <td>
+                                    <input type="text" class="discountPercent-field" name="discountPercent[]" id="discountPercent_1" autocomplete="off" style="text-align:right;font-size:13px;height:25px;width:45px;margin-left:-29px;" maxlength="4" />
+                                </td>
+                                <td>
+                                    <input type="text" class="discountAmount-field" name="discountAmount[]" id="discountAmount_1" autocomplete="off" style="text-align:right;font-size:13px;height:25px;width:80px;margin-left:-35px;" maxlength="10" />
+                                </td>
+                                <td>
+                                    <input type="text" class="amount-field" name="amount[]" id="amount_1" autocomplete="off" style="text-align:right;height:25px;font-weight:bold;width:85px;margin-left:-25px;background-color:#212529;color:white;border:1px solid white;" maxlength="13" readonly />
+                                </td>
+                                <td>
+                                    <input hidden type="text" class="actualAmount-field" name="actualAmount[]" id="actualAmount_1" autocomplete="off" style="text-align:right;height:25px;font-weight:bold;width:80px;margin-left:-2px;background-color:#212529;color:white;border:1px solid white;" maxlength="13" readonly />
+                                </td>
+                                <td>
+                                    <input hidden type="text" class="taxable-field" name="taxable[]" id="taxable_1" autocomplete="off" style="text-align:right;height:25px;font-weight:bold;width:50px;margin-left:-1px;background-color:#212529;color:white;border:1px solid white;" maxlength="13" readonly />
+                                </td>
+                                <td>
+                                    <input hidden type="text" class="taxAmount-field" name="taxAmount[]" id="taxAmount_1" autocomplete="off" style="text-align:right;height:25px;font-weight:bold;width:10px;margin-left:-4px;background-color:#212529;color:white;border:1px solid white;" maxlength="13" readonly />
+                                </td>
+                                <td>
+                                    <input  type="text" class="id-field" name="id[]" id="id_1" readonly autocomplete="off" style="font-size:13px;height:25px;width:50px;margin-left:-97px;background-color:#212529;color:white;border:1px solid white;text-align:right;" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> -->
+            
+            
+            
+            
+            
+            
+            
+            //start without using password_verify
+            
+               $querySearchUser = "select*from user_master1 where user_name = '$userName' && user_pass = '$userPass'";
+        $resultSearchUser = $con->query($querySearchUser);
+        
+        // $checkUserNameAndPassword = $resultSearchUser->fetch_assoc();
+        
+        
+        if($resultSearchUser->num_rows!=0){
+        
+        while($userData = $resultSearchUser->fetch_assoc()){
+        
+            if($userData['user_name'] == $userName && $userData['user_pass'] == $userPass
+            && $userData['user_role'] != 'Super Admin' && $userData['login_status'] == 0){
+                                
+                                
+                                
+                $_SESSION['user_id'] = $userData['id'];
+                $_SESSION['user_name'] = $userData['user_name'];
+                $_SESSION['user_password'] = $userData['user_pass'];
+                $_SESSION['user_role'] = $userData['user_role'];
+                $_SESSION['user_created_date'] = $userData['created_date'];
+                $_SESSION['user_branch_id'] = $userData['branch_id'];
+                
+                
+                
+                
+                $querySearchBranch = "select*from branches where id = '$userData[branch_id]'";
+                $resultSearchBranch = $con->query($querySearchBranch)->fetch_assoc();
+                
+                $_SESSION['branch_name']       = $resultSearchBranch['branch_name'];
+                $_SESSION['branch_address1']   = $resultSearchBranch['address1'];
+                $_SESSION['branch_address2']   = $resultSearchBranch['address2'];
+                $_SESSION['branch_address3']   = $resultSearchBranch['address3'];
+                $_SESSION['branch_locality']   = $resultSearchBranch['locality'];
+                $_SESSION['branch_city']       = $resultSearchBranch['city'];
+                $_SESSION['branch_pinCode']    = $resultSearchBranch['pincode'];
+                $_SESSION['branch_state']      = $resultSearchBranch['state'];
+                $_SESSION['branch_landline']   = $resultSearchBranch['landline'];
+                $_SESSION['branch_mobile']     = $resultSearchBranch['mobile'];
+                $_SESSION['branch_email']      = $resultSearchBranch['email'];
+                $_SESSION['branch_gst_no']     = $resultSearchBranch['gst_no'];
+                             
+                
+                $querySearchUserFormsPermission = "select*from user_forms_permission where 
+                                                   user_id = '$userData[id]' 
+                                                   and branch_id = '$userData[branch_id]'";
+                $resultSearchUserFormsPermission = $con->query($querySearchUserFormsPermission)->fetch_assoc();
+                
+                
+                $_SESSION['company_form_access']  = $resultSearchUserFormsPermission['company_form'];
+                $_SESSION['branch_form_access']   = $resultSearchUserFormsPermission['branch_form'];
+                $_SESSION['supplier_form_access'] = $resultSearchUserFormsPermission['supplier_form'];
+                $_SESSION['customer_form_access'] = $resultSearchUserFormsPermission['customer_form'];
+                $_SESSION['sales_person_form_access']       = $resultSearchUserFormsPermission['sales_person_form'];
+                $_SESSION['product_form_access']            = $resultSearchUserFormsPermission['product_form'];
+                $_SESSION['brand_form_access']                  = $resultSearchUserFormsPermission['brand_form'];
+                $_SESSION['design_form_access']             = $resultSearchUserFormsPermission['design_form'];
+                $_SESSION['color_form_access']              = $resultSearchUserFormsPermission['color_form'];
+                $_SESSION['batch_form_access']              = $resultSearchUserFormsPermission['batch_form'];
+                $_SESSION['hsn_form_access']                = $resultSearchUserFormsPermission['hsn_form'];
+                $_SESSION['category_form_access']           = $resultSearchUserFormsPermission['category_form'];
+                $_SESSION['tax_form_access']                 = $resultSearchUserFormsPermission['tax_form'];
+                $_SESSION['size_form_access']               = $resultSearchUserFormsPermission['size_form'];
+                $_SESSION['mrp_form_access']                = $resultSearchUserFormsPermission['mrp_form'];
+                $_SESSION['item_form_access']               = $resultSearchUserFormsPermission['item_form'];
+                $_SESSION['purchase_form_access']            = $resultSearchUserFormsPermission['purchase_form'];
+                $_SESSION['purchase_return_form_access'] = $resultSearchUserFormsPermission['purchase_return_form'];
+                $_SESSION['sales_form_access']           = $resultSearchUserFormsPermission['sales_form'];
+                $_SESSION['reports_form_access']         = $resultSearchUserFormsPermission['reports_form'];
+                $_SESSION['user_info_form_access']          = $resultSearchUserFormsPermission['user_info_form'];
+                $_SESSION['user_management_form_access'] = $resultSearchUserFormsPermission['user_management_form'];
+                
+                
+                
+                $querySearchUserCrudPermission = "select*from user_crud_permission where 
+                                                   user_id = '$userData[id]' 
+                                                   and branch_id = '$userData[branch_id]'";
+                $resultSearchUserCrudPermission = $con->query($querySearchUserCrudPermission);
+                
+                $_SESSION['formNameArrayCreateOp'] = [];
+                $_SESSION['formNameArrayReprintOp']  = [];
+                $_SESSION['formNameArrayUpdateOp'] = [];
+                $_SESSION['formNameArrayDeleteOp'] = [];
+                // List of forms to track permissions for
+                $formNames = ['company_form', 'branch_form', 'supplier_form',
+                            'customer_form','sales_person_form','product_form',
+                            'brand_form','design_form','color_form','batch_form',
+                            'hsn_form','category_form','size_form','tax_form',
+                            'mrp_form','item_form','purchase_form','purchase_return_form',
+                            'sales_form','reports_form','user_info_form','user_management_form'
+                ];
+
+                while ($UserCrudPermissionData = $resultSearchUserCrudPermission->fetch_assoc()) {
+                $formName = $UserCrudPermissionData['form_name'];
+
+                // Check if form is in the list
+                    if (in_array($formName, $formNames)) {
+                        $_SESSION[$formName . '_create']  = $UserCrudPermissionData['create_op'];
+                        $_SESSION[$formName . '_reprint'] = $UserCrudPermissionData['reprint_op'];
+                        $_SESSION[$formName . '_update']  = $UserCrudPermissionData['update_op'];
+                        $_SESSION[$formName . '_delete']  = $UserCrudPermissionData['delete_op'];
+                    }
+                    
+                    
+                    
+                  
+                }
+                
+                
+                
+                echo "<br>";
+                echo $_SESSION['company_form_create'];
+                echo "<br>";
+                echo $_SESSION['company_form_reprint'];
+                echo "<br>";
+                echo $_SESSION['company_form_update'];
+                echo "<br>";
+                echo $_SESSION['company_form_delete'];
+                echo "<br>";
+                
+                
+                
+                
+                
+                // $_SESSION['company_form']           = $resultSearchUserCrudPermission['company_name'];
+                // $_SESSION['branch_form']            = $resultSearchUserCrudPermission['branch_form'];
+                // $_SESSION['supplier_form']          = $resultSearchUserCrudPermission['supplier_form'];
+                // $_SESSION['customer_form']              = $resultSearchUserCrudPermission['customer_form'];
+                // $_SESSION['sales_person_form']          = $resultSearchUserCrudPermission['sales_person_form'];
+                // $_SESSION['product_form']            = $resultSearchUserCrudPermission['product_form'];
+                // $_SESSION['brand_form']                  = $resultSearchUserCrudPermission['brand_form'];
+                // $_SESSION['design_form']             = $resultSearchUserCrudPermission['design_form'];
+                // $_SESSION['color_form']              = $resultSearchUserCrudPermission['color_form'];
+                // $_SESSION['batch_form']              = $resultSearchUserCrudPermission['batch_form'];
+                // $_SESSION['hsn_form']                = $resultSearchUserCrudPermission['hsn_form'];
+                // $_SESSION['category_form']           = $resultSearchUserCrudPermission['category_form'];
+                // $_SESSION['tax_form']                 = $resultSearchUserCrudPermission['tax_form'];
+                // $_SESSION['size_form']               = $resultSearchUserCrudPermission['size_form'];
+                // $_SESSION['mrp_form']                = $resultSearchUserCrudPermission['mrp_form'];
+                // $_SESSION['item_form']               = $resultSearchUserCrudPermission['item_form'];
+                // $_SESSION['purchase_form']            = $resultSearchUserCrudPermission['purchase_form'];
+                // $_SESSION['purchase_return_form'] = $resultSearchUserCrudPermission['purchase_return_form'];
+                // $_SESSION['sales_form_']           = $resultSearchUserCrudPermission['sales_form'];
+                // $_SESSION['reports_form']         = $resultSearchUserCrudPermission['reports_form'];
+                // $_SESSION['user_info_form']          = $resultSearchUserCrudPermission['user_info_form'];
+                // $_SESSION['user_management_form'] = $resultSearchUserCrudPermission['user_management_form'];
+                
+                
+                
+                
+                
+                
+                
+                
+                $querySearchCompany = "select*from company where id = 1";
+                $resultSearchCompany = $con->query($querySearchCompany);
+                
+                $_SESSION['is_logged_in'] = true;
+                
+                while($companyData = $resultSearchCompany->fetch_assoc()){
+                    $_SESSION['company_id']         = $companyData['id'];
+                    $_SESSION['company_name']       = $companyData['company_name'];
+                    $_SESSION['company_short_name'] = $companyData['company_short_name'];
+                    $_SESSION['company_address1']   = $companyData['address1'];
+                    $_SESSION['company_address2']   = $companyData['address2'];
+                    $_SESSION['company_address3']   = $companyData['address3'];
+                    $_SESSION['company_locality']   = $companyData['locality'];
+                    $_SESSION['company_city']       = $companyData['city'];
+                    $_SESSION['company_pincode']    = $companyData['pincode'];
+                    $_SESSION['company_state']      = $companyData['state'];
+                    $_SESSION['company_landline']   = $companyData['landline'];
+                    $_SESSION['company_mobile']     = $companyData['mobile'];
+                    $_SESSION['company_email']      = $companyData['email'];
+                    $_SESSION['company_gst_no']     = $companyData['gst_no'];
+                    
+                    
+                
+                
+                
+                }  
+                
+                $queryGetCounter = "select*from counters";
+                $resultGetCounter = $locationConnection->query($queryGetCounter)->fetch_assoc();
+                $_SESSION['counter_name'] = $resultGetCounter['counter_name'];
+                
+                
+                // $updateQueryLoginStatus = "update user_master1 set login_status = 1 where user_name = '$_SESSION[user_name]' and user_pass = '$_SESSION[user_password]'
+                //                           and branch_id = '$_SESSION[user_branch_id]'";
+                // $resultQueryLoginStatus = $con->query($updateQueryLoginStatus);
+                
+                header("Location:pages/financialYearSelection.php");
+                
+            
+            }elseif($userData['user_role'] == 'Super Admin'){
+            
+                $_SESSION['user_id'] = $userData['id'];
+                $_SESSION['user_name'] = $userData['user_name'];
+                $_SESSION['user_password'] = $userData['user_pass'];
+                $_SESSION['user_role'] = $userData['user_role'];
+                $_SESSION['user_created_date'] = $userData['created_date'];
+                $_SESSION['user_branch_id'] = $userData['branch_id'];
+                
+                
+                
+                
+                $querySearchBranch = "select*from branches where id = '$userData[branch_id]'";
+                $resultSearchBranch = $con->query($querySearchBranch)->fetch_assoc();
+                
+                $_SESSION['branch_name']       = $resultSearchBranch['branch_name'];
+                $_SESSION['branch_address1']   = $resultSearchBranch['address1'];
+                $_SESSION['branch_address2']   = $resultSearchBranch['address2'];
+                $_SESSION['branch_address3']   = $resultSearchBranch['address3'];
+                $_SESSION['branch_locality']   = $resultSearchBranch['locality'];
+                $_SESSION['branch_city']       = $resultSearchBranch['city'];
+                $_SESSION['branch_pinCode']    = $resultSearchBranch['pincode'];
+                $_SESSION['branch_state']      = $resultSearchBranch['state'];
+                $_SESSION['branch_landline']   = $resultSearchBranch['landline'];
+                $_SESSION['branch_mobile']     = $resultSearchBranch['mobile'];
+                $_SESSION['branch_email']      = $resultSearchBranch['email'];
+                $_SESSION['branch_gst_no']     = $resultSearchBranch['gst_no'];
+                             
+                
+                $querySearchUserFormsPermission = "select*from user_forms_permission where 
+                                                   user_id = '$userData[id]' 
+                                                   and branch_id = '$userData[branch_id]'";
+                $resultSearchUserFormsPermission = $con->query($querySearchUserFormsPermission)->fetch_assoc();
+                
+                
+                $_SESSION['company_form_access']  = $resultSearchUserFormsPermission['company_form'];
+                $_SESSION['branch_form_access']   = $resultSearchUserFormsPermission['branch_form'];
+                $_SESSION['supplier_form_access'] = $resultSearchUserFormsPermission['supplier_form'];
+                $_SESSION['customer_form_access'] = $resultSearchUserFormsPermission['customer_form'];
+                $_SESSION['sales_person_form_access']       = $resultSearchUserFormsPermission['sales_person_form'];
+                $_SESSION['product_form_access']            = $resultSearchUserFormsPermission['product_form'];
+                $_SESSION['brand_form_access']                  = $resultSearchUserFormsPermission['brand_form'];
+                $_SESSION['design_form_access']             = $resultSearchUserFormsPermission['design_form'];
+                $_SESSION['color_form_access']              = $resultSearchUserFormsPermission['color_form'];
+                $_SESSION['batch_form_access']              = $resultSearchUserFormsPermission['batch_form'];
+                $_SESSION['hsn_form_access']                = $resultSearchUserFormsPermission['hsn_form'];
+                $_SESSION['category_form_access']           = $resultSearchUserFormsPermission['category_form'];
+                $_SESSION['tax_form_access']                 = $resultSearchUserFormsPermission['tax_form'];
+                $_SESSION['size_form_access']               = $resultSearchUserFormsPermission['size_form'];
+                $_SESSION['mrp_form_access']                = $resultSearchUserFormsPermission['mrp_form'];
+                $_SESSION['item_form_access']               = $resultSearchUserFormsPermission['item_form'];
+                $_SESSION['purchase_form_access']            = $resultSearchUserFormsPermission['purchase_form'];
+                $_SESSION['purchase_return_form_access'] = $resultSearchUserFormsPermission['purchase_return_form'];
+                $_SESSION['sales_form_access']           = $resultSearchUserFormsPermission['sales_form'];
+                $_SESSION['reports_form_access']         = $resultSearchUserFormsPermission['reports_form'];
+                $_SESSION['user_info_form_access']          = $resultSearchUserFormsPermission['user_info_form'];
+                $_SESSION['user_management_form_access'] = $resultSearchUserFormsPermission['user_management_form'];
+                
+                
+                
+                $querySearchUserCrudPermission = "select*from user_crud_permission where 
+                                                   user_id = '$userData[id]' 
+                                                   and branch_id = '$userData[branch_id]'";
+                $resultSearchUserCrudPermission = $con->query($querySearchUserCrudPermission)->fetch_assoc();
+                
+                $_SESSION['create_op_access']  = $resultSearchUserCrudPermission['create_op'];
+                $_SESSION['reprint_op_access'] = $resultSearchUserCrudPermission['reprint_op'];
+                $_SESSION['update_op_access']  = $resultSearchUserCrudPermission['update_op'];
+                $_SESSION['delete_op_access']  = $resultSearchUserCrudPermission['delete_op'];
+                
+                
+                
+                // $_SESSION['company_form']           = $resultSearchUserCrudPermission['company_form'];
+                // $_SESSION['branch_form']            = $resultSearchUserCrudPermission['branch_form'];
+                // $_SESSION['supplier_form']          = $resultSearchUserCrudPermission['supplier_form'];
+                // $_SESSION['customer_form']              = $resultSearchUserCrudPermission['customer_form'];
+                // $_SESSION['sales_person_form']          = $resultSearchUserCrudPermission['sales_person_form'];
+                // $_SESSION['product_form']            = $resultSearchUserCrudPermission['product_form'];
+                // $_SESSION['brand_form']                  = $resultSearchUserCrudPermission['brand_form'];
+                // $_SESSION['design_form']             = $resultSearchUserCrudPermission['design_form'];
+                // $_SESSION['color_form']              = $resultSearchUserCrudPermission['color_form'];
+                // $_SESSION['batch_form']              = $resultSearchUserCrudPermission['batch_form'];
+                // $_SESSION['hsn_form']                = $resultSearchUserCrudPermission['hsn_form'];
+                // $_SESSION['category_form']           = $resultSearchUserCrudPermission['category_form'];
+                // $_SESSION['tax_form']                 = $resultSearchUserCrudPermission['tax_form'];
+                // $_SESSION['size_form']               = $resultSearchUserCrudPermission['size_form'];
+                // $_SESSION['mrp_form']                = $resultSearchUserCrudPermission['mrp_form'];
+                // $_SESSION['item_form']               = $resultSearchUserCrudPermission['item_form'];
+                // $_SESSION['purchase_form']            = $resultSearchUserCrudPermission['purchase_form'];
+                // $_SESSION['purchase_return_form'] = $resultSearchUserCrudPermission['purchase_return_form'];
+                // $_SESSION['sales_form_']           = $resultSearchUserCrudPermission['sales_form'];
+                // $_SESSION['reports_form']         = $resultSearchUserCrudPermission['reports_form'];
+                // $_SESSION['user_info_form']          = $resultSearchUserCrudPermission['user_info_form'];
+                // $_SESSION['user_management_form'] = $resultSearchUserCrudPermission['user_management_form'];
+                
+                
+                
+                
+                
+                
+                
+                
+                $querySearchCompany = "select*from company where id = 1";
+                $resultSearchCompany = $con->query($querySearchCompany);
+                
+                $_SESSION['is_logged_in'] = true;
+                
+                while($companyData = $resultSearchCompany->fetch_assoc()){
+                    $_SESSION['company_id']         = $companyData['id'];
+                    $_SESSION['company_name']       = $companyData['company_name'];
+                    $_SESSION['company_short_name'] = $companyData['company_short_name'];
+                    $_SESSION['company_address1']   = $companyData['address1'];
+                    $_SESSION['company_address2']   = $companyData['address2'];
+                    $_SESSION['company_address3']   = $companyData['address3'];
+                    $_SESSION['company_locality']   = $companyData['locality'];
+                    $_SESSION['company_city']       = $companyData['city'];
+                    $_SESSION['company_pincode']    = $companyData['pincode'];
+                    $_SESSION['company_state']      = $companyData['state'];
+                    $_SESSION['company_landline']   = $companyData['landline'];
+                    $_SESSION['company_mobile']     = $companyData['mobile'];
+                    $_SESSION['company_email']      = $companyData['email'];
+                    $_SESSION['company_gst_no']     = $companyData['gst_no'];
+                    
+                    
+                
+                
+                
+                }  
+                
+                $queryGetCounter = "select*from counters";
+                $resultGetCounter = $locationConnection->query($queryGetCounter)->fetch_assoc();
+                $_SESSION['counter_name'] = $resultGetCounter['counter_name'];
+            
+                // $updateQueryLoginStatus = "update user_master1 set login_status = 1 where user_name = '$_SESSION[user_name]' and user_pass = '$_SESSION[user_password]'
+                //                           and branch_id = '$_SESSION[user_branch_id]'";
+                // $resultQueryLoginStatus = $con->query($updateQueryLoginStatus);
+            
+                header("Location:pages/financialYearSelection.php");
+            }else{
+                
+                $_SESSION['failure'] = "User Already Logged In";
+                header("Location:index.php");    
+            }
+        }
+    }else{
+        
+            $_SESSION['failure'] = "Invalid User Name Or Password!";
+        
+            header("Location:index.php");
+    }
+    
+    //end without using password_verify

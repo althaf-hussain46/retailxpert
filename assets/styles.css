@@ -1,0 +1,94 @@
+
+
+
+.offcanvas-backdrop{
+    display: none important;
+}
+.sidebar{
+    
+    position: fixed;
+    top: 55px;
+    width: 80px ;
+    height: 100%;
+}
+.companyName{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+   
+    
+}
+
+.sidebar-link .right-icon{
+    transition: all 0.5s;
+  }
+  
+  .sidebar-link[aria-expanded="true"] .right-icon{
+    transform: rotate(180deg);
+  }
+  
+  
+  #master_items{
+    margin-right:20px;
+    border-right: 1px solid white;
+  }
+  #trans_menu a{ 
+  
+  color: white;
+  text-decoration: none;
+  font-size: medium;
+  padding: 5px 5px;
+  font-weight: bold;
+  
+  }
+  
+  #trans_menu a:hover{ 
+    padding: 5px 5px;
+    display: block;
+    background-color: #575757;
+  
+  }
+  
+.fireside-text {
+    font-family: Verdana;
+    margin-right: 200px;
+    margin-top:-60px;
+    font-size: 150px;
+}
+/*.developerName{*/
+/*    font-family: 'Verdana';*/
+/*    position: absolute;*/
+/*    font-weight: bolder;*/
+/*    top:550px;*/
+/*    right:880px;*/
+/*    font-size: 20px;*/
+/*}*/
+  /*
+  .developerName{*/
+  /*    position: absolute;*/
+  /*    bottom: 50px;*/
+  /*    font-family:'FiresideDemo';*/
+  /*    font-size: x-large;*/
+      
+  /*}*/
+  
+  li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 5px 5px;
+        font-weight: bold;
+      }
+  li a:hover {
+    background-color: #575757;
+  }
+
+
+/* li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+li a:hover {
+    background-color: #575757;
+  } */
