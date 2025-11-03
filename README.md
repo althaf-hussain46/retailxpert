@@ -96,9 +96,9 @@ Includes an **Advanced Role-Based Access Control (RBAC)** system:
 
 | Role | Username | Password |
 |------|-----------|-----------|
-| Admin | admin | admin123 |
-| Manager | manager | manager123 |
-| User | sales | sales123 |
+| Admin | Demo@Admin | Demo_12345 |
+| Manager | Demo@Manager | 123 |
+
 
 ---
 
