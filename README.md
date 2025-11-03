@@ -122,27 +122,28 @@ Includes an **Advanced Role-Based Access Control (RBAC)** system:
 ## 📸 Screenshots
 <img width="1891" height="770" alt="image" src="https://github.com/user-attachments/assets/c33e2c88-cf1c-4a5e-83c4-aa93cdcc1a70" />
 <br>
+<br>
+<br>
 <img width="1891" height="829" alt="image" src="https://github.com/user-attachments/assets/d17734af-e795-45b8-b815-75baa11f9d80" />
+<br>
+<br>
 <br>
 <img width="1891" height="829" alt="image" src="https://github.com/user-attachments/assets/eb81989a-f08f-4e34-b519-f723ca1c862e" />
 <br>
+<br>
+<br>
 <img width="1891" height="829" alt="image" src="https://github.com/user-attachments/assets/d9bbde14-939d-48d7-b6f7-e481ad0fb91c" />
+<br>
+<br>
 <br>
 <img width="1891" height="829" alt="image" src="https://github.com/user-attachments/assets/c9ecb48d-90ed-4d8f-9c96-4abfb8c0e312" />
 <br>
+<br>
+<br>
 <img width="1891" height="829" alt="image" src="https://github.com/user-attachments/assets/f51e3fbf-daae-49f0-8b50-4df7dd4c463b" />
-
-
-
-
-
-
-
-
-
- 
- 
- 
+<br>
+<br>
+<br>
 
 ---
 
