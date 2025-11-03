@@ -110,14 +110,6 @@ Includes an **Advanced Role-Based Access Control (RBAC)** system:
 
 ---
 
-## 🎓 Academic Details
-
-**Project Title:** RetailXpert – Web Based Inventory Management System  
-**Degree:** MCA Final Year Project (2025)  
-**Institution:** MEASI Institute Of Information Technology  
-
-
----
 
 ## 📸 Screenshots
 <img width="1891" height="770" alt="image" src="https://github.com/user-attachments/assets/c33e2c88-cf1c-4a5e-83c4-aa93cdcc1a70" />
@@ -147,11 +139,6 @@ Includes an **Advanced Role-Based Access Control (RBAC)** system:
 
 ---
 
-## 📃 License
-
-This project is created for **academic and demonstration purposes only.**  
-
----
 
 ## 🤝 Acknowledgements
 Special thanks to **OPTIONS Mobiles & Accessories Shop** for providing real-time project requirements and feedback during system development.
