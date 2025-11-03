@@ -1,7 +1,7 @@
 # 🛒 RetailXpert – Web-Based Inventory Management System
 
 RetailXpert is a **web-based inventory management system** designed to streamline retail operations such as product management, purchases, sales, stock management, and user access control.  
-It was developed as part of the **MCA Final Year Project** for a real-world retail shop named **OPTIONS (Mobile & Accessories Store) - Saligramam**.
+It was developed as part of the **MCA Final Year Project** for a real-world retail shop named **OPTIONS Mobiles & Accessories - Saligramam**.
 
 ---
 
@@ -112,10 +112,10 @@ Includes an **Advanced Role-Based Access Control (RBAC)** system:
 
 ## 🎓 Academic Details
 
-**Project Title:** RetailXpert – Inventory Management System  
+**Project Title:** RetailXpert – Web Based Inventory Management System  
 **Degree:** MCA Final Year Project (2025)  
-**Institution:** [MEASI Institute Of Information Technology]  
-**Developed By:** Althaf Hussain J  
+**Institution:** MEASI Institute Of Information Technology  
+
 
 ---
 
@@ -154,7 +154,7 @@ This project is created for **academic and demonstration purposes only.**
 ---
 
 ## 🤝 Acknowledgements
-Special thanks to **OPTIONS Mobile Shop** for providing real-time project requirements and feedback during system development.
+Special thanks to **OPTIONS Mobiles & Accessories Shop** for providing real-time project requirements and feedback during system development.
 
 ---
 
