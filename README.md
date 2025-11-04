@@ -148,10 +148,10 @@ Special thanks to **OPTIONS Mobiles & Accessories Shop** for providing real-time
 
 ##  Project Links :
 
-Website Link : https://www.retailxpert.in
+[Website Link : ](https://www.retailxpert.in)
 <br>
 <br>
-Demo Video  : https://drive.google.com/file/d/1mAIXT4P57S3A7-4Uc-ysghSSBiWxQLuN/view
+[Demo Video  :](https://drive.google.com/file/d/1mAIXT4P57S3A7-4Uc-ysghSSBiWxQLuN/view)
 
 
 
